@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html> 
+<body>
+<?php 
+//PHP array
+//array of days of the week
+$days = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"); 
+foreach($days as $value) { 
+    echo "$value <br>"; 
+    } 
+
+//array of temps
+$temps["july"] = "11 and 19";  
+$temps["august"] = "11 and 19"; 
+ $temps["january"] = "1 and 7"; 
+$temps["february"] = "1 and 7"; 
+ 
+    echo "July is between ". $temps["july"] ." degrees <br/>"; 
+    echo "Aug is between ". $temps["august"] ." degrees <br/>"; 
+    echo "Jan is between ". $temps["january"] ." degrees <br/>"; 
+    echo "Feb is between ". $temps["february"] ." degrees <br/>"; 
+
+//array of pupil results
+    $results = array( 
+        "aarron" => array( 
+            'physics' => '74', 
+            'english' => '69', 
+            'maths' => '70' 
+         ), 
+        
+         "jamie" => array( 
+            "physics" => '64', 
+            "english" => '79', 
+            "maths" => '69' 
+        ), 
+        
+        "harry" => array( 
+            "physics" => '55', 
+            "english" => '62', 
+            "maths" => '70' 
+            ) 
+         ); 
+        
+            
+    echo "Results for Aarron: <br/>"; 
+    echo "Physics: ", $results['aarron']['physics'], "%<br/>"; 
+    echo "English: ", $results['aarron']['english'], "%<br/>"; 
+    echo "Maths: ", $results['aarron']['maths'], "%<br/><br/>"; 
+        
+          
+    echo "Results for Jamie: <br/>"; 
+    echo "Physics: ", $results['jamie']['physics'], "%<br/>"; 
+    echo "English: ", $results['jamie']['english'], "%<br/>"; 
+    echo "Maths: ", $results['jamie']['maths'], "%<br/><br/>"; 
+        
+             
+    echo "Results for Harry: <br/>"; 
+    echo "Physics: ", $results['harry']['physics'], "%<br/>"; 
+    echo "English: ", $results['harry']['english'], "%<br/>"; 
+    echo "Maths: ", $results['harry']['maths'], "%<br/><br/>"; 
+
+?> 
+</body> 
+</html> 
+
+ 
+

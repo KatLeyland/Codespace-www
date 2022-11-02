@@ -1,0 +1,8 @@
+#main-page {
+	margin-top: 10px;
+}
+
+ #btn:hover {
+	background-color: rgb(178, 102, 255);
+	box-shadow: 2px 2px purple;
+}

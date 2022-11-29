@@ -5,8 +5,6 @@ include('includes/nav.html');
 # Open database connection
 require ('connect_db.php');
 
-echo '<div class="row>';
-
 # Retrieve items from 'products' database table
 $q = "SELECT * FROM products";
 $r = mysqli_query( $link, $q);
@@ -28,6 +26,7 @@ echo '
     </div>
     </div>
     </div>
+    
     ';
 }
 # Close database connection.

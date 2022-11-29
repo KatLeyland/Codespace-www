@@ -1,28 +1,9 @@
-<?PHP # Connect to the database.
- require ('connect_db.php');
- $q = "SELECT * FROM user;" ;
- $r = @mysqli_query ( $link, $q ) ;
- //include('nav.php');
- if ( mysqli_num_rows( $r ) != 0 ) 
-{
-echo '
-<h1>Read Records</h1>
- <table class="table">
- <thead>
-<tr>
-<th>ID</th>
-<th>First Name</th>
-<th>Last Name</th> </tr> </thead> <tbody>';
-while($row = mysqli_fetch_array($r,MYSQLI_ASSOC))
-{
-echo'<tr>
-<td>'.$row['user_id'].'</td>
-<td>'.$row['first_name'].'</td>
-<td>'.$row['last_name'].'</td> '; }
-#navlinks here
-}
-# Close database connection.
-mysqli_close($link); 
-exit();
+<?PHP 
+session_start();
+
+# Redirect if not logged in.
+if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load() ; };
+
+echo"{[first_name]}"
 
 ?>

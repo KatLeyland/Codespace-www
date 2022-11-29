@@ -14,9 +14,11 @@ function validate( $link, $email = '', $pwd = '')
     if ( empty( $email ) ) 
   { $errors[] = 'Enter your email address.' ; } 
   else  { $e = mysqli_real_escape_string( $link, trim( $email ) ) ; }
+
   if ( empty( $pwd ) ) 
   { $errors[] = 'Enter your password.' ; } 
   else { $p = mysqli_real_escape_string( $link, trim( $pwd ) ) ; }
+  
 #stores error message if email and password not in user table
 if ( empty( $errors ) ) 
   {

@@ -1,5 +1,5 @@
 <?php
-include ( 'includes/nav.html' ) ;
+include ( 'includes/nav.php' ) ;
 
 require ( 'connect_db.php' );
 

@@ -14,7 +14,7 @@ if (mysqli_num_rows( $r) > 0)
 {
 # Display body section
 
-while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC))
+while ( $row = mysqli_fetch_array($r, MYSQLI_ASSOC))
 {
 echo '
 <div class="col-sm">

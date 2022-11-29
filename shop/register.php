@@ -36,14 +36,14 @@ if ( !empty($_POST[ 'pass1' ] ) )
 #stores error message if email is found in table
 if ( empty( $errors ) )
   {
-    $q = "SELECT user_id FROM user WHERE email='$e'" ;
+    $q = "SELECT user_id FROM users WHERE email='$e'" ;
     $r = @mysqli_query ( $link, $q ) ;
     if (mysqli_num_rows( $r ) != 0 ) $errors[] = 'Email address already registered. <a class="alert-link" href="login.php">Sign In Now</a>' ;
   }
 #stores user data in database
 if ( empty( $errors ) ) 
   {
-    $q = "INSERT INTO user (first_name, last_name, email, pass, reg_date) 
+    $q = "INSERT INTO users (first_name, last_name, email, pass, reg_date) 
 	VALUES ('$fn', '$ln', '$e', '$p', NOW() )";
     $r = @mysqli_query ( $link, $q ) ;
     if ($r)

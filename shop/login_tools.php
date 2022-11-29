@@ -22,7 +22,7 @@ function validate( $link, $email = '', $pwd = '')
 #stores error message if email and password not in user table
 if ( empty( $errors ) ) 
   {
-    $q = "SELECT 'user_id', 'first_name', 'last_name' FROM user WHERE email='$e' AND pass='$p'" ;  
+    $q = "SELECT user_id, first_name, last_name FROM users WHERE email='$e' AND pass='$p'" ;  
     $r = mysqli_query ( $link, $q ) ;
     if ( @mysqli_num_rows( $r ) == 1 ) 
     {

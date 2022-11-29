@@ -3,7 +3,7 @@
 session_start() ;
 
 # Redirect if not logged in.
-if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load() ; };
+if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load() ; }
     ?>
 <!doctype html>
 <html lang="en">
@@ -23,11 +23,7 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-  <a class="navbar-brand" href="#">
-  <?php
-  echo "{$_SESSION['first_name']} {$_SESSION['last_name']}";
-  ?>
-  </a>
+  <a class="navbar-brand" href="#"><?php echo "{$_SESSION['first_name']} {$_SESSION['last_name']}"; ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -64,15 +64,38 @@ else
   }  
 }
 ?>
-<form action="register.php" method="post">
-<input type="text" name="first_name" placeholder="First Name" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>"> 
-<input type="text" name="last_name" placeholder="Last Name" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
-				
+<div class='row'>
+    <div class='col-sm'>
+        <div class='card-header'><h1>Register</h1>
+        <div class='card-body'>
+        <form action="register.php" method="post">
+          <div class='row'>
+          <div class='form-group'>
+          <label for='inputfirstname'>First Name</label>
+            <input type="text" name="first_name" placeholder="First Name" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>"> 
+          </div>
+          <div class='form-group'>
+          <label for='inputlastname'>Last Name</label>
+            <input type="text" name="last_name" placeholder="Last Name" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
+            </div>
+</div>
+<div class='row'>
+          <div class='form-group'>
+          <label for='inputemail'>Email</label>
 <input type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">		
-				
+</div>
+</div>
+<div class='row'>
+          <div class='form-group'>
+          <label for='inputpassword1'>Password</label>
 <input type="password" name="pass1" placeholder="Create Password" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>">
-					
-<input type="password" name="pass2" class="form-control" placeholder="Confirm Password" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>">
-					
+</div>
+          <div class='form-group'>
+          <label for='inputpassword2'>Confirm Password</label>
+<input type="password" name="pass2" placeholder="Confirm Password" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>">
+</div>
+</div>
+          <div class='form-group'>
+          <label for='inputlastname'>Last Name</label>
 <input type="submit" value="Register"></p>
 </form>

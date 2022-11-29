@@ -19,6 +19,7 @@ if ( isset( $errors ) && !empty( $errors ) )
                 <input type="text" name="email" class="form-control" placeholder="*Enter Username/Email"> 
             </div>
             <div class='form-group'>
+            <label for='inputpassword'>Password</label>
             <input type="password" name="pass"  class="form-control" placeholder="*Enter Password">		
             </div>
             <input type="submit" value="Login" >

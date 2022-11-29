@@ -12,11 +12,21 @@ $q = "SELECT * FROM products" ;
 while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
 	{
 	echo '
-<img src="'. $row['item_img'].'" alt="'. $row['item_name'].'">
-<h5>'. $row['item_name'].'</h5>
-<p>'. $row['item_desc'].'</p>
-<p>&pound '. $row['item_price'].'</p>
-<a href="added.php?id='.$row['item_id'].'" >Buy Now</a>  ';
+	<div class="row">
+	<div class="col-sm">
+	
+    <div class="card" style="width: 18rem;">
+    <img src="'. $row['item_img'].'" class="card-img-top" alt="'.$row['item_name'].'">
+    <div class="card-body text-center">
+        <h5 class="card-title">'.$row['item_name'].'</h5>
+        <p class="card-text">'. $row['item_desc'].'</p>
+        <p class="card-text"> &pound '. $row['item_price'].'</p>
+       <a href="added.php?id='.$row['item_id'].'" class="btn btn-light">Buy Now</a>
+    </div>
+	</div>
+    </div>
+    </div>';
+
 	}
 	
 	mysqli_close( $link) ; 
